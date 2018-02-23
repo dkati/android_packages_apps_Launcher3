@@ -18,16 +18,22 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Folder titles -->
-    <string name="google_title" translatable="false">Google</string>
-    <string name="play_folder_title">Play</string>
-
     <!-- Custom grid -->
-    <string name="num_default">Default</string>
-    <string name="grid_category_title">Columns and rows</string>
-    <string name="number_of_columns_title">Grid and app drawer columns</string>
-    <string name="number_of_rows_title">Grid and app drawer rows</string>
-    <string name="number_of_hotseat_title">Homescreen quicklaunch icons</string>
-    <string name="state_loading">Applying\u2026</string>
-    <string name="app_drawer_category_title">App drawer</string>
+    <string-array name="grid_names">
+        <item>@string/num_default</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="grid_values">
+        <item>-1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
 </resources>
