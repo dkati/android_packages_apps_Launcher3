@@ -54,6 +54,7 @@ LOCAL_SRC_FILES := \
     $(call all-proto-files-under, protos) \
     $(call all-proto-files-under, proto_overrides)
 
+LOCAL_CERTIFICATE := platform
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
@@ -66,7 +67,7 @@ LOCAL_PROTO_JAVA_OUTPUT_PARAMS := enum_style=java
 LOCAL_USE_AAPT2 := true
 
 LOCAL_SDK_VERSION := current
-LOCAL_MIN_SDK_VERSION := 21
+LOCAL_MIN_SDK_VERSION := 26
 LOCAL_PACKAGE_NAME := Launcher3
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_OVERRIDES_PACKAGES := Home Launcher2
@@ -116,7 +117,7 @@ LOCAL_PROTO_JAVA_OUTPUT_PARAMS := enum_style=java
 LOCAL_USE_AAPT2 := true
 
 LOCAL_SDK_VERSION := current
-LOCAL_MIN_SDK_VERSION := 21
+LOCAL_MIN_SDK_VERSION := 26
 LOCAL_PACKAGE_NAME := Launcher3Go
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3
@@ -236,7 +237,6 @@ LOCAL_MANIFEST_FILE := quickstep/AndroidManifest.xml
 LOCAL_JACK_COVERAGE_INCLUDE_FILTER := com.android.launcher3.*
 
 include $(BUILD_PACKAGE)
-
 
 # ==================================================
 include $(call all-makefiles-under,$(LOCAL_PATH))
