@@ -18,6 +18,7 @@ package com.android.launcher3;
 
 import android.app.ActivityOptions;
 import android.content.ActivityNotFoundException;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
@@ -39,6 +40,7 @@ import com.android.launcher3.uioverrides.DisplayRotationListener;
 import com.android.launcher3.uioverrides.WallpaperColorInfo;
 import com.android.launcher3.shortcuts.DeepShortcutManager;
 import com.android.launcher3.views.BaseDragLayer;
+import com.android.launcher3.util.CustomSettingsObserver;
 
 /**
  * Extension of BaseActivity allowing support for drag-n-drop
@@ -65,6 +67,21 @@ public abstract class BaseDraggingActivity extends BaseActivity
 
     private DisplayRotationListener mRotationListener;
 
+    private boolean mForceDark;
+    private SystemThemeObserver mSettingsObserver;
+
+    private class SystemThemeObserver extends CustomSettingsObserver.System {
+        public SystemThemeObserver(ContentResolver resolver) {
+            super(resolver);
+        }
+
+        @Override
+        public void onSettingChanged(int keySettingInt) {
+            mForceDark = mSettingsObserver.getSettingInt() == 1;
+            recreate();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +91,11 @@ public abstract class BaseDraggingActivity extends BaseActivity
         // Update theme
         WallpaperColorInfo wallpaperColorInfo = WallpaperColorInfo.getInstance(this);
         wallpaperColorInfo.addOnChangeListener(this);
+
+        mSettingsObserver = new SystemThemeObserver(this.getContentResolver());
+        mSettingsObserver.register("berry_dark_check");
+        mForceDark = mSettingsObserver.getSettingInt() == 1;
+
         int themeRes = getThemeRes(wallpaperColorInfo);
         if (themeRes != mThemeRes) {
             mThemeRes = themeRes;
@@ -89,7 +111,7 @@ public abstract class BaseDraggingActivity extends BaseActivity
     }
 
     protected int getThemeRes(WallpaperColorInfo wallpaperColorInfo) {
-        if (wallpaperColorInfo.isDark()) {
+        if (wallpaperColorInfo.isDark() || mForceDark) {
             return wallpaperColorInfo.supportsDarkText() ?
                     R.style.LauncherThemeDark_DarKText : R.style.LauncherThemeDark;
         } else {
