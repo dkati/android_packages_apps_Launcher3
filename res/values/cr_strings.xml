@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-/*
-* Copyright (C) 2008 The Android Open Source Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*      http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+     Copyright (C) 2018 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
@@ -22,25 +20,39 @@
     <string name="google_title" translatable="false">Google</string>
     <string name="play_folder_title">Play</string>
 
-    <!-- Custom grid -->
-    <string name="num_default">Default</string>
-    <string name="grid_category_title">Columns and rows</string>
-    <string name="number_of_columns_title">Grid and app drawer columns</string>
-    <string name="number_of_rows_title">Grid and app drawer rows</string>
-    <string name="number_of_hotseat_title">Homescreen quicklaunch icons</string>
-    <string name="state_loading">Applying\u2026</string>
+    <!-- General -->
+    <string name="settings_title">Settings</string>
+
+    <!-- Categories -->
+    <string name="home_category_title">Home screen</string>
+    <string name="home_category_summary">Set Google now panel and more</string>
+    <string name="icons_category_title">Icons</string>
+    <string name="icons_category_summary">Set icon shape and more</string>
     <string name="app_drawer_category_title">App drawer</string>
+    <string name="app_drawer_category_summary">Customize your app drawer</string>
+    <string name="gestures_category_title">Gestures</string>
+    <string name="gestures_category_summary">Enhance your experience</string>
+
+    <!-- Sub categories -->
+    <string name="home_grid_title">Grid layout</string>
+
+    <!-- Gestures -->
+    <string name="allow_swipe_down_clearall_title">Clear all from recents view</string>
+    <string name="allow_swipe_down_clearall_desc">Swipe vertically downward in recents view to clear all apps.\n\nThis doesn\'t works if P navbar gestures are enable</string>
 
     <!-- Google Feed -->
-    <string name="settings_feed">Enable Google feed integration</string>
+    <string name="google_feed_title">Google now panel</string>
+    <string name="google_feed_summary">Swipe to the right of the homescreen to access the Google now panel</string>
+
+    <!-- Grid -->
+    <string name="num_default">Default</string>
+    <string name="number_of_columns_title">Number of columns</string>
+    <string name="number_of_rows_title">Number of rows</string>
+    <string name="number_of_hotseat_title">Number of dock icons</string>
+    <string name="state_loading">Applying\u2026</string>
 
     <!-- Show labels on icon -->
-    <string name="desktop_show_label_title">Homescreen Apps Labels</string>
-    <string name="desktop_show_label_summary">Show labels below the icons on desktop</string>
-    <string name="allapps_show_label_title">AppDrawer Apps Labels</string>
-    <string name="allapps_show_label_summary">Show labels below the icons in app drawer</string>
-
-    <!-- Swipe Down to clear all -->
-    <string name="allow_swipe_down_clearall_title">Clear all on swipe down from recents view</string>
-    <string name="allow_swipe_down_clearall_desc">Doesn\'t works if P navbar gestures are enable</string>
+    <string name="app_show_label_title">App labels</string>
+    <string name="desktop_show_label_summary">Show the labels of apps on the homscreen</string>
+    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
 </resources>
