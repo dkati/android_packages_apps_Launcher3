@@ -85,8 +85,8 @@
 
     <!-- Screen 1 -->
     <appwidget
-        launcher:packageName="com.crdroid.music"
-        launcher:className="com.kabouzeid.gramophone.appwidgets.AppWidgetBig"
+        launcher:packageName="org.lineageos.eleven"
+        launcher:className="org.lineageos.eleven.appwidgets.AppWidgetLarge"
         launcher:screen="1"
         launcher:x="0"
         launcher:y="0"
