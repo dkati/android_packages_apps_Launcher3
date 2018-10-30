@@ -1378,6 +1378,6 @@ public abstract class RecentsView<T extends BaseActivity> extends PagedView impl
     }
 
     public boolean getSwipeForClearAllState() {
-        return Utilities.getPrefs(mActivity).getBoolean("pref_allowSwipeDownClearAll", false);
+        return true;
     }
 }
